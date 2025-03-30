@@ -25,6 +25,11 @@ gulp.task('sassification', function(){
     .pipe(gulp.dest('prod/css'));
 });
 
+gulp.task('css', function(){
+  return gulp.src('dev/css/*.css')
+    .pipe(gulp.dest('prod/css'));
+});
+
 gulp.task('htmlification', function(){
   return gulp.src('dev/*.html')
     .pipe(gulp.dest('prod'));
@@ -59,7 +64,7 @@ gulp.task('browser-sync', function() {
 
 // Exec
 
-gulp.task('observation', gulp.parallel('browser-sync', 'sassification', 'htmlification','jsification', 'imageTransfer','fontTransfer', function(){
+gulp.task('observation', gulp.parallel('browser-sync', 'sassification', 'css', 'htmlification','jsification', 'imageTransfer','fontTransfer', function(){
   gulp.watch('dev/css/**/*.scss', gulp.series('sassification'));
   gulp.watch('dev/*.html', gulp.series('htmlification'));
   gulp.watch('dev/js/*.js', gulp.series('jsification'));

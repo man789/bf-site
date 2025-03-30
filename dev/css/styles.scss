@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+// Thin Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 100;
+}
+// Extralight Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 200;
+}
+// Light Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 300;
+}
+// Regular Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 400;
+}
+// Medium Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 500;
+}
+// SemiBold Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 600;
+}
+// Bold Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 700;
+}
+// ExtraBold Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 800;
+}
+// Black Font
+@font-face {
+  font-family: grotesk;
+  src: url('../fonts/');
+  font-weight: 900;
+}
+
+body{
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "grotesk", sans-serif;
+}
