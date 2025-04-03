@@ -1,64 +1,291 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-// Thin Font
 @font-face {
   font-family: grotesk;
-  src: url('../fonts/');
-  font-weight: 100;
-}
-// Extralight Font
-@font-face {
-  font-family: grotesk;
-  src: url('../fonts/');
+  src: url('../fonts/SpaceGrotesk-Light.woff');
   font-weight: 200;
 }
-// Light Font
 @font-face {
   font-family: grotesk;
-  src: url('../fonts/');
+  src: url('../fonts/SpaceGrotesk-Regular.woff');
   font-weight: 300;
 }
-// Regular Font
 @font-face {
   font-family: grotesk;
-  src: url('../fonts/');
+  src: url('../fonts/SpaceGrotesk-Mediumm.woff');
   font-weight: 400;
 }
-// Medium Font
 @font-face {
   font-family: grotesk;
-  src: url('../fonts/');
+  src: url('../fonts/SpaceGrotesk-SemiBold.woff');
   font-weight: 500;
 }
-// SemiBold Font
 @font-face {
   font-family: grotesk;
-  src: url('../fonts/');
+  src: url('../fonts/SpaceGrotesk-Bold.woff');
   font-weight: 600;
-}
-// Bold Font
-@font-face {
-  font-family: grotesk;
-  src: url('../fonts/');
-  font-weight: 700;
-}
-// ExtraBold Font
-@font-face {
-  font-family: grotesk;
-  src: url('../fonts/');
-  font-weight: 800;
-}
-// Black Font
-@font-face {
-  font-family: grotesk;
-  src: url('../fonts/');
-  font-weight: 900;
 }
 
 body{
   background-color: #ffffff;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  color: #144070;
 }
-
 h1,h2,h3,h4,h5,h6{
   font-family: "grotesk", sans-serif;
+  color: #144070;
+}
+
+// btn
+.btn_primary{
+  width: fit-content;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #144070;
+  border: 1px solid #144070;
+  padding: 12px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out; 
+}
+.btn_primary:hover{
+  width: fit-content;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #2e73b8;
+  border: 1px solid #ffffff;
+  padding: 12px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out; 
+}
+// ---
+
+
+.wrapper{
+  max-width: 1200px;
+  width: 100%;
+}
+.main__nav{
+  width: 100%;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out; /* Smooth hiding effect */
+}
+.main__nav a{
+  text-decoration: none;
+  color: #144070;
+  font-weight: 500;
+}
+.main__nav .wrapper{
+  display: flex;
+  align-items: center;
+}
+.main__nav__logo{
+  width: 100px;
+  height: 100px;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+.main__nav__logo img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.main__nav__content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.main__nav__content__socials{
+  margin-bottom: .5rem;
+}
+.main__nav__content__socials a{
+  margin-left: 10px;
+}
+.main__nav__content__socials img{
+  width: 20px;
+  height: 20px;
+}
+.main__nav__content__links{
+  border-top: 1px solid #144070;
+  padding-top: .5rem;
+}
+@media (max-width: 900px){
+  .main__nav.nav--activ{
+    height: 100%;
+    background-color: white;
+  }
+  .main__nav__content.nav--activ{
+    display: flex;
+    position: fixed;
+    gap: 2rem;
+    bottom: 1rem;
+    left: 2rem;
+  }
+  .main__nav__content{
+    display: none;
+  }
+  .main__nav__content.nav--activ{
+    position: relative;
+    gap: .5rem;
+  }
+  .main__nav .wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .main__nav__content__socials {
+    order: 2;
+  }
+  .main__nav__content__links {
+    order: 1;
+    border-bottom: 1px solid #144070;
+    border-top: none;
+    padding-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+  }
+}
+// Burger Menu
+.nav__burger{
+  display: none;
+}
+@media (max-width: 900px){
+  .nav__burger{
+    position: fixed;
+    top: 0;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    width: 25px;
+    height: 125px;
+    z-index: 1000;
+    padding: 50px 0;
+  }
+  .nav__burger span{
+    width: 25px;
+    height: 2px;
+    border: none;
+    background-color: #144070;
+    transition: all ease-in-out .5s;
+  }
+  .nav__burger span:nth-of-type(2){
+    transition: all ease-in-out .5s;
+  }
+  .burger--activ span:nth-of-type(2){
+    opacity: 0;
+  }
+  .burger--activ span:nth-of-type(1){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .burger--activ span:nth-of-type(3){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+}
+
+// Header
+.main__header{
+  margin-top: 120px;
+  background: url('../img/header.webp') center/cover;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__header h1{
+  font-size: 4rem;
+  color: #ffffff;
+  text-align: center;
+}
+.main__header span{
+  font-size: 2rem;
+}
+// Filtre
+.filtre__wrapper{
+  max-width: 800px;
+  width: 100%;
+  border: 2px solid #ffffff;
+  background-color: #2e73b8;
+  color: #ffffff;
+  margin-top: -25px;
+}
+.filtre__form__header{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.filtre__form__input{
+  width: 50%;
+}
+.filtre__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: .5rem 1rem;
+}
+.filtre__title a{
+  color: #ffffff;
+}
+.filtre__body{
+  padding: .5rem 1rem;
+}
+.filtre__footer{
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.collapsible {
+  width: fit-content;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+}
+.filtre__form_content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.filtre__input{
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(26, 62, 93, .5);
+  color: #144070;
+  font-family: Space Grotesk, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+  padding: 13px 20px;
+  width: 100%;
+}
+// content
+.main__content section{
+  display: flex;
+  justify-content: center;
 }
