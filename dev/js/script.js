@@ -1,3 +1,4 @@
+// Burger Menu Animation
 let burger = document.querySelector('.nav__burger');
 let nav = document.querySelector('.main__nav');
 let logo = document.querySelector('.main__nav__logo');
@@ -5,7 +6,6 @@ let menuRight = document.querySelector('.main__nav__content');
 let link = document.querySelector('.main__nav__content__links');
 let links = document.querySelectorAll('.main__nav__content__link');
 let navSocial = document.querySelector('.main__nav__content__socials');
-
 burger.addEventListener('click', function () {
   nav.classList.toggle('nav--activ');
   logo.classList.toggle('nav--activ');
@@ -15,12 +15,11 @@ burger.addEventListener('click', function () {
   burger.classList.toggle('burger--activ');
 });
 
+// Hide navbar on scroll down, show on scroll up
 let lastScrollTop = 0;
 let scrollThreshold = 120; // Scroll threshold before hiding
-// Hide navbar on scroll down, show on scroll up
 window.addEventListener('scroll', function () {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
   if (scrollTop > scrollThreshold) { 
       // Only activate hiding effect after scrolling 120px
       if (scrollTop > lastScrollTop) {
@@ -31,14 +30,12 @@ window.addEventListener('scroll', function () {
           nav.style.top = "0";
       }
   }
-
   lastScrollTop = scrollTop;
 });
 
 // Collapse
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
+let coll = document.getElementsByClassName("collapsible");
+let i;
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active-collapse");
