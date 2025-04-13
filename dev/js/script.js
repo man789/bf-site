@@ -18,19 +18,24 @@ burger.addEventListener('click', function () {
 // Hide navbar on scroll down, show on scroll up
 let lastScrollTop = 0;
 let scrollThreshold = 120; // Scroll threshold before hiding
+let breakpoint = 900; // Only trigger for screens wider than this
+// Hide navbar on scroll down (only on desktop)
 window.addEventListener('scroll', function () {
-  let scrollTop = window.scrollY || document.documentElement.scrollTop;
-  if (scrollTop > scrollThreshold) { 
-      // Only activate hiding effect after scrolling 120px
-      if (scrollTop > lastScrollTop) {
-          // Scrolling down
-          nav.style.top = "-120px";
+  if (window.innerWidth > breakpoint) {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > scrollThreshold) {
+          if (scrollTop > lastScrollTop) {
+              nav.style.top = "-120px"; // Hide nav
+          } else {
+              nav.style.top = "0"; // Show nav
+          }
       } else {
-          // Scrolling up
-          nav.style.top = "0";
+          nav.style.top = "0"; // Always show when scroll is less than threshold
       }
+
+      lastScrollTop = scrollTop;
   }
-  lastScrollTop = scrollTop;
 });
 
 // Collapse
