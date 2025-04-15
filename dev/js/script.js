@@ -15,6 +15,21 @@ burger.addEventListener('click', function () {
   burger.classList.toggle('burger--activ');
 });
 
+// Submenu toggle for mobile
+let submenuToggles = document.querySelectorAll('.submenu-toggle');
+
+submenuToggles.forEach(toggle => {
+  toggle.addEventListener('click', function (e) {
+    if (window.innerWidth <= 900) {
+      e.preventDefault(); // Prevent page navigation
+      let parent = this.closest('.with-submenu');
+      parent.classList.toggle('open');
+      // Toggle arrow direction (optional)
+      this.classList.toggle('open');
+    }
+  });
+});
+
 // Hide navbar on scroll down, show on scroll up
 let lastScrollTop = 0;
 let scrollThreshold = 120; // Scroll threshold before hiding

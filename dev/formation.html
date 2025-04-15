@@ -28,9 +28,23 @@
         <div class="main__nav__content__links">
           <a href="formation.html" class="main__nav__content__link">Formations</a>
           <a href="employeur.html" class="main__nav__content__link">Services aux employeurs</a>
-          <a href="a-propos.html" class="main__nav__content__link">A propos</a>
+          <div class="main__nav__content__link with-submenu">
+            <button class="submenu-toggle">A-propos</button>
+            <div class="submenu">
+              <a href="#">Test sous menu</a>
+              <a href="#">Test sous menu</a>
+            </div>
+          </div>
           <a href="job.html" class="main__nav__content__link">Jobs</a>
-          <a href="contact.html" class="main__nav__content__link">Contact</a>
+          <div class="main__nav__content__link with-submenu">
+            <button class="submenu-toggle">Contact</button>
+            <div class="submenu">
+              <a href="#">Test sous menu</a>
+              <a href="#">Test sous menu</a>
+              <a href="#">Test sous menu</a>
+              <a href="#">Test sous menu</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -41,9 +55,355 @@
     <span></span>
   </div>
   <header class="secondary__header">
+    <div class="wrapper">
+      <h1>Formations</h1>
+    </div>
   </header>
   <main class="main__content">
-    
+    <section class="search__formation">
+      <div class="wrapper wrapper__formation">
+        <div class="form__formation__container">
+          <form class="form__formation">
+            <div class="form__formation__content">
+              <div class="form__formation__header">
+                <div class="input-field">
+                  <input id="search" type="text" placeholder="Formation" />
+                </div>
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choix-domaine">
+                      <option placeholder="" value="">Domaines</option>
+                      <option>Domaine a</option>
+                      <option>Domaine b</option>
+                      <option>Domaine c</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form__formation__filtre">
+                <span class="desc">Plus de filtres</span>
+                <div class="form__input">
+                  <div class="input-field">
+                    <div class="input-select">
+                      <select data-trigger="" name="choix-organisme">
+                        <option placeholder="" value="">Organisme</option>
+                        <option>Subject b</option>
+                        <option>Subject c</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-field">
+                    <div class="input-select">
+                      <select data-trigger="" name="choix-date-entree">
+                        <option placeholder="" value="">Date d'entrée</option>
+                        <option>Subject b</option>
+                        <option>Subject c</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-field">
+                    <div class="input-select">
+                      <select data-trigger="" name="choix-duree">
+                        <option placeholder="" value="">Durée de la formation</option>
+                        <option>Last time</option>
+                        <option>Today</option>
+                        <option>This week</option>
+                        <option>This month</option>
+                        <option>This year</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-field">
+                    <div class="input-select">
+                      <select data-trigger="" name="choix-proche">
+                        <option placeholder="" value="">Proche de moi</option>
+                        <option>Subject b</option>
+                        <option>Subject c</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__result">
+                <div class="input-field">
+                  <div class="group-btn">
+                    <button class="btn-delete" id="delete">RESET</button>
+                    <button class="btn-search">SEARCH</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="intro__formation">
+      <div class="wrapper">
+        <p><a href="https://uicookies.com/bootstrap-search-box/">https://uicookies.com/bootstrap-search-box/</a><br><a href="https://colorlib.com/wp/free-css3-html5-search-form-examples/">https://colorlib.com/wp/free-css3-html5-search-form-examples/</a><br>Vous êtes dans le catalogue des formations pour chercheurs et chercheuses d’emploi.</p>
+        <p>Vous êtes un travailleur, une travailleuse ou une entreprise, découvrez toutes nos formations.</p>
+      </div>
+    </section>
+    <section class="formation">
+      <div class="wrapper">
+        <div class="formation__cards">
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="formation__card">
+            <div class="formation__card__info">
+              <h2><a href="template-seance.html">Maitriser les tests psychotechniques et de recrutement, les attitudes emploi et l’entretien d’embauche</a></h2>
+              <div><i class="fa-solid fa-calendar-days"></i><span>7 mai 2025</span></div>
+              <div><i class="fa-solid fa-clock"></i><span>10 semaines de formation + 4 semaines de stage | temps plein</span></div>
+              <div><i class="fa-solid fa-location-dot"></i><span>Bruxelles Formation - BF tremplin - Gare Maritime</span></div>
+            </div>
+            <div class="formation__card__description">
+              <div class="formation__card__tag">
+                <a href="#">Informations générales et services</a><a href="#">Jurys et examens</a>
+              </div>
+              <p>API Dorifor - "brief": "Boostez votre carrière : préparez-vous à réussir vos tests psychotechniques, à aborder vos entretiens de motivation avec confiance et à développer les compétences essentielles pour évoluer vers des entreprises de premier plan !"</p>
+              <div class="formation__card__link">
+                <a href="template-formation.html">Consultez la fiche</a><i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <section class="partenaire">
     <div class="partenaire__logo">
