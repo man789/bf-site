@@ -40,6 +40,7 @@ h1,h2,h3,h4,h5,h6{
 /* btn */
 .btn_primary{
   width: fit-content;
+  height: fit-content;
   color: #ffffff;
   display: block;
   text-decoration: none;
@@ -54,9 +55,46 @@ h1,h2,h3,h4,h5,h6{
   color: #ffffff;
   text-decoration: none;
   background-color: #2e73b8;
-  border: 1px solid #ffffff;
+  border: 1px solid #2e73b8;
   padding: 12px 12px;
   border-radius: 6px;
+  transition: all 0.3s ease-in-out; 
+}
+.btn_secondary{
+  width: fit-content;
+  height: fit-content;
+  color: #144070;
+  display: block;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #144070;
+  padding: 12px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out; 
+}
+.btn_secondary:hover{
+  width: fit-content;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #2e73b8;
+  border: 1px solid #2e73b8;
+  padding: 12px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out; 
+}
+/* --- */
+.center-content{
+  display: flex;
+  justify-content: center;
+}
+a{
+  text-decoration: none;
+  color: #2e73b8;
+  transition: all 0.3s ease-in-out; 
+}
+a:hover{
+  text-decoration: none;
+  color: #144070;
   transition: all 0.3s ease-in-out; 
 }
 /* --- */
@@ -478,7 +516,7 @@ section h2{
   margin-left: 1rem;
   color: #2e73b8;
 }
-/* Parcours */
+/* Parcours Homepage */
 .parcours{
   background-color: #f1f1f1;
   padding: 2rem 0;
@@ -965,15 +1003,153 @@ footer{
 }
 .page__content li:before{
   content: "";
-  display: inline-block !important;
-  background-image: none !important;
-  background-color: #144070 !important;
-  height: 1px !important;
-  left: -30px !important;
-  position: absolute !important;
-  top: 12px !important;
-  width: 10px !important;
+  display: inline-block;
+  background-image: none;
+  background-color: #144070;
+  height: 1px;
+  left: -30px;
+  position: absolute;
+  top: 8px;
+  width: 10px;
 }
 /* Article Single Template */
+.article__head{
+  display: flex;  
+  flex-direction: column;
+}
+.article__date{
+  font-size: .7rem;
+  margin-top: 1rem;
+}
+.article__tag{
+  font-size: .7rem;
+  margin-top: 1rem;
+}
+.article__tag a{
+  background-color: #2e73b8;
+  border: 1px solid #2e73b8;
+  padding: 4px 8px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-right: 6px; 
+}
+.article__img{
+  width: 100%;
+  height: 300px;
+  margin-top: 1rem;
+}
+.article__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 /* Formation Single Template */
+.single__formation__info{
+  padding: 2rem 0;
+  background-color: #f1f1f1;
+}
+.single__formation__info .wrapper{
+  display: flex;
+  gap: 2rem;
+}
+.single__formation__info__img{
+  width: 50%;
+  height: auto;
+}
+.single__formation__info__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.single__formation__info__content{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.single__formation__info__content >div:nth-of-type(1){
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.single__formation__info__content i{
+  margin-right: 1rem;
+}
+.single__formation__info__content div:last-child{
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.formation__tag{
+  font-size: .8rem;
+}
+.formation__tag a{
+  background-color: transparent;
+  border: 1px solid #144070;
+  padding: 4px 8px;
+  text-decoration: none;
+  color: #144070;
+  border-radius: 5px;
+  margin-right: 6px;
+}
+.single__formation__info__content >div:last-child >span{
+  margin-left: auto;
+  font-size: .8rem;
+}
+.single__formation__condition{
+  margin-bottom: 2rem;
+}
+.single__formation__inscription{
+  background-color: #f1f1f1;
+  padding-bottom: 2rem;
+}
+.single__formation__inscription__btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.single-formation ul{
+  list-style: none;
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.single-formation li{
+  margin-bottom: 5px;
+  position: relative;
+  margin-bottom:1rem;
+}
+.single-formation li:before{
+  content: "";
+  display: inline-block;
+  background-image: none;
+  background-color: #144070;
+  height: 1px;
+  left: -30px;
+  position: absolute;
+  top: 8px;
+  width: 10px;
+}
+.single__formation__inscription__content{
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+}
+.single__formation__inscription__content h4{
+  margin-top: 0;
+}
+.single-formation .parcours{
+  background-color: #ffffff;
+}
+.single-formation .parcours h2{
+  margin-bottom: 2rem;
+}
+.single-formation .parcours__step__bg{
+  background-color: #f1f1f1;
+}
+.single-formation .parcours__step__number{
+  background-color: #f1f1f1;
+  border: 1px solid #ffffff;
+}
 /* Seance Single Template */
