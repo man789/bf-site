@@ -59,6 +59,13 @@
       <h1>Formations</h1>
     </div>
   </header>
+  <section class="breadcrumbs">
+    <div class="wrapper">
+      <div class="breadcrumbs__content">
+        <a href="#">Home</a> <i class="fa-solid fa-chevron-right" style="font-size: .7rem;"></i> Titre de la page
+      </div>
+    </div>
+  </section>
   <main class="main__content">
     <section class="search__formation">
       <div class="wrapper wrapper__formation">
@@ -81,45 +88,47 @@
                 </div>
               </div>
               <div class="form__formation__filtre">
-                <span class="desc">Plus de filtres</span>
-                <div class="form__input">
-                  <div class="input-field">
-                    <div class="input-select">
-                      <select data-trigger="" name="choix-organisme">
-                        <option placeholder="" value="">Organisme</option>
-                        <option>Subject b</option>
-                        <option>Subject c</option>
-                      </select>
+                <button type="button" class="collapsible">Plus de filtres</button>
+                <div class="filtre__form_content">
+                  <div class="form__input">
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-organisme">
+                          <option placeholder="" value="">Organisme</option>
+                          <option>Subject b</option>
+                          <option>Subject c</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                  <div class="input-field">
-                    <div class="input-select">
-                      <select data-trigger="" name="choix-date-entree">
-                        <option placeholder="" value="">Date d'entrée</option>
-                        <option>Subject b</option>
-                        <option>Subject c</option>
-                      </select>
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-date-entree">
+                          <option placeholder="" value="">Date d'entrée</option>
+                          <option>Subject b</option>
+                          <option>Subject c</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                  <div class="input-field">
-                    <div class="input-select">
-                      <select data-trigger="" name="choix-duree">
-                        <option placeholder="" value="">Durée de la formation</option>
-                        <option>Last time</option>
-                        <option>Today</option>
-                        <option>This week</option>
-                        <option>This month</option>
-                        <option>This year</option>
-                      </select>
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-duree">
+                          <option placeholder="" value="">Durée de la formation</option>
+                          <option>Last time</option>
+                          <option>Today</option>
+                          <option>This week</option>
+                          <option>This month</option>
+                          <option>This year</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                  <div class="input-field">
-                    <div class="input-select">
-                      <select data-trigger="" name="choix-proche">
-                        <option placeholder="" value="">Proche de moi</option>
-                        <option>Subject b</option>
-                        <option>Subject c</option>
-                      </select>
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-proche">
+                          <option placeholder="" value="">Proche de moi</option>
+                          <option>Subject b</option>
+                          <option>Subject c</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -139,7 +148,7 @@
     </section>
     <section class="intro__formation">
       <div class="wrapper">
-        <p><a href="https://uicookies.com/bootstrap-search-box/">https://uicookies.com/bootstrap-search-box/</a><br><a href="https://colorlib.com/wp/free-css3-html5-search-form-examples/">https://colorlib.com/wp/free-css3-html5-search-form-examples/</a><br>Vous êtes dans le catalogue des formations pour chercheurs et chercheuses d’emploi.</p>
+        <p>Vous êtes dans le catalogue des formations pour chercheurs et chercheuses d’emploi.</p>
         <p>Vous êtes un travailleur, une travailleuse ou une entreprise, découvrez toutes nos formations.</p>
       </div>
     </section>

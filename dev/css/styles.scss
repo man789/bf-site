@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6{
   color: #144070;
 }
 
-// btn
+/* btn */
 .btn_primary{
   width: fit-content;
   color: #ffffff;
@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 6px;
   transition: all 0.3s ease-in-out; 
 }
-// ---
+/* --- */
 .wrapper{
   max-width: 1200px;
   width: 100%;
@@ -244,7 +244,7 @@ h1,h2,h3,h4,h5,h6{
 .submenu-toggle.open:after {
   content: '\f077'; /* Upward arrow */
 }
-// Burger Menu
+/* Burger Menu */
 .nav__burger{
   display: none;
 }
@@ -288,9 +288,9 @@ h1,h2,h3,h4,h5,h6{
     transform: translate(-50%,-50%) rotate(-45deg);
   }
 }
-// Header
+/* Header */
 .main__header{
-  margin-top: 120px;
+  margin-top: 100px;
   background: url('../img/header.webp') center/cover;
   height: 300px;
   width: 100%;
@@ -317,7 +317,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 1.5rem;
   }
 }
-// bloc Filtre
+/* bloc Filtre */
 .filtre{
   padding: 2rem 0;
 }
@@ -355,11 +355,11 @@ h1,h2,h3,h4,h5,h6{
 }
 .collapsible {
   width: fit-content;
-  color: #ffffff;
+  color: #144070;
   background-color: transparent;
   border: none;
-  padding: 0;
-  text-transform: uppercase;
+  padding: 10px;
+  cursor: pointer;
 }
 .filtre__form_content {
   padding: 0 18px;
@@ -381,7 +381,7 @@ h1,h2,h3,h4,h5,h6{
   padding: 13px 20px;
   width: 100%;
 }
-// content
+/* content */
 section h2{
   font-weight: 600;
   font-size: 2rem;
@@ -402,7 +402,7 @@ section h2{
   margin-bottom: 2rem;
   display: inline-block;
 }
-// actualite
+/* actualite */
 .actu .btn_primary{
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -478,7 +478,7 @@ section h2{
   margin-left: 1rem;
   color: #2e73b8;
 }
-// Parcours
+/* Parcours */
 .parcours{
   background-color: #f1f1f1;
   padding: 2rem 0;
@@ -594,7 +594,7 @@ section h2{
     height: 35px;
   }
 }
-// Séance
+/* Séance */
 .seance .btn_primary{
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -653,7 +653,7 @@ section h2{
     font-size: .875rem;
   }
 }
-// Footer
+/* Footer */
 .partenaire{
   padding: 2rem 0;
   border-bottom: 1px solid #ffffff;
@@ -694,8 +694,23 @@ footer{
 .nav__footer{
   column-count: 2;
 }
+/* Breadcrumbs */
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border: 1px solid #f1f1f1;
+}
+.breadcrumbs__content{
+  color: #666;
+}
+.breadcrumbs__content a{
+  color: #666;
+  text-decoration: none;
+}
+/* Secondary Header */
 .secondary__header{
-  margin-top: 120px;
+  margin-top: 100px;
   height: fit-content;
   width: 100%;
   display: flex;
@@ -710,6 +725,9 @@ footer{
   text-align: center;
 }
 /*Page Formation*/
+.formation{
+  margin: 2rem 0;
+}
 .formation__card{
   display: flex;
   flex-direction: column;
@@ -783,7 +801,77 @@ footer{
     margin-bottom: 0;
   }
 }
-
+/* bloc Filtre */
+.filtre{
+  padding: 2rem 0;
+}
+.filtre__wrapper{
+  max-width: 800px;
+  width: 100%;
+  border: 2px solid #ffffff;
+  background-color: #2e73b8;
+  color: #ffffff;
+}
+.filtre__form__header{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.filtre__form__input{
+  width: 50%;
+}
+.filtre__title{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: .5rem 1rem;
+}
+.filtre__title a{
+  color: #ffffff;
+}
+.filtre__body{
+  padding: .5rem 1rem;
+}
+.filtre__footer{
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.collapsible {
+  min-width: 100px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+  background: transparent;
+  white-space: nowrap;
+  border-radius: 0;
+  font-size: 14px;
+  color: #666;
+  transition: all .2s ease-out, color .2s ease-out;
+  border: 1px solid #00bbec;
+  cursor: pointer;
+  font-weight: bold;
+}
+.filtre__form_content {
+  padding: 0  ;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.filtre__input{
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(26, 62, 93, .5);
+  color: #144070;
+  font-family: Space Grotesk, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+  padding: 13px 20px;
+  width: 100%;
+}
 /* Bloc Search */
 .wrapper__formation{
   display: flex;
@@ -862,3 +950,30 @@ footer{
   font-weight: bold;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
 }
+/* Page Single Template */
+.page__content ul{
+  list-style: none;
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.page__content li{
+  margin-bottom: 5px;
+  position: relative;
+  margin-bottom:1rem;
+}
+.page__content li:before{
+  content: "";
+  display: inline-block !important;
+  background-image: none !important;
+  background-color: #144070 !important;
+  height: 1px !important;
+  left: -30px !important;
+  position: absolute !important;
+  top: 12px !important;
+  width: 10px !important;
+}
+/* Article Single Template */
+/* Formation Single Template */
+/* Seance Single Template */
