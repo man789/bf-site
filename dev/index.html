@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.min.css">
   <title>Template Project - BF</title>
 </head>
-<body class="main__page">
+<body class="main__page homepage">
   <a href="#main-content" class="skip-link">Skip to content</a>
   <nav class="main__nav">
     <div class="wrapper">
@@ -58,7 +58,7 @@
     <h1>Former pour l'emploi</h1><span>Nous formons gratuitement les chercheurs d’emploi à Bruxelles.</span>
   </header>
   <main class="main__content">
-    <section class="filtre">
+    <!-- <section class="filtre">
       <div class="filtre__wrapper">
         <div class="filtre__title">
           <p>Recherchez une formation</p>
@@ -84,6 +84,85 @@
         </div>
         <div class="filtre__footer">
           <button class="btn_primary">Voir les résultats</button>
+        </div>
+      </div>
+    </section> -->
+    <section class="search__formation">
+      <div class="wrapper wrapper__formation">
+        <div class="form__formation__container">
+          <form class="form__formation">
+            <div class="form__formation__content">
+              <div class="form__formation__header">
+                <div class="input-field">
+                  <input id="search" type="text" placeholder="Formation" />
+                </div>
+                <div class="input-field">
+                  <div class="input-select">
+                    <select data-trigger="" name="choix-domaine">
+                      <option placeholder="" value="">Domaines</option>
+                      <option>Domaine a</option>
+                      <option>Domaine b</option>
+                      <option>Domaine c</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form__formation__filtre">
+                <button type="button" class="collapsible">Plus de filtres</button>
+                <div class="filtre__form_content">
+                  <div class="form__input">
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-organisme">
+                          <option placeholder="" value="">Organisme</option>
+                          <option>Subject b</option>
+                          <option>Subject c</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-date-entree">
+                          <option placeholder="" value="">Date d'entrée</option>
+                          <option>Subject b</option>
+                          <option>Subject c</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-duree">
+                          <option placeholder="" value="">Durée de la formation</option>
+                          <option>Last time</option>
+                          <option>Today</option>
+                          <option>This week</option>
+                          <option>This month</option>
+                          <option>This year</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="input-field">
+                      <div class="input-select">
+                        <select data-trigger="" name="choix-proche">
+                          <option placeholder="" value="">Proche de moi</option>
+                          <option>Subject b</option>
+                          <option>Subject c</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__result">
+                <div class="input-field">
+                  <div class="group-btn">
+                    <button class="btn-delete" id="delete">RESET</button>
+                    <button class="btn-search">SEARCH</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -309,12 +388,13 @@
         </div>
         <nav>
           <ul class="nav__footer">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Accueil</a></li>
+            <li><a href="template-article.html">Single Article</a></li>
+            <li><a href="template-page.html">Single Page</a></li>
+            <li><a href="template-formation.html">Single Formation</a></li>
+            <li><a href="template-seance.html">Single séance</a></li>
+            <li><a href="job.html">Jobs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="employeur.html">employeurs</a></li>
           </ul>
         </nav>
       </div>
