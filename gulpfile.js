@@ -1,73 +1,80 @@
-// Variables
+// Dependencies
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const rename = require("gulp-rename");
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const uglify = require('gulp-uglify');
+const browserSync = require('browser-sync').create();
 
-let gulp = require('gulp');
-let sass = require('gulp-sass')(require('sass'));
-let rename = require("gulp-rename");
-let sourcemaps = require('gulp-sourcemaps');
-let autoprefixer = require('gulp-autoprefixer');
-let uglify = require('gulp-uglify');
-let pipeline = require('readable-stream').pipeline;
-let browserSync = require('browser-sync').create();
-
-// Tasks
-
-gulp.task('sassification', function(){
+// Sass task
+gulp.task('sassification', function () {
   return gulp.src('dev/css/*.scss')
-    .pipe(autoprefixer({
-      cascade: false
-    }))
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(rename(function(path){
-      path.basename += ".min";
-    }))
-    .pipe(sourcemaps.write(''))
-    .pipe(gulp.dest('prod/css'));
+    .pipe(autoprefixer({ cascade: false }))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('prod/css'))
+    .pipe(browserSync.stream()); // live inject CSS
 });
 
-gulp.task('css', function(){
+// Copy plain CSS
+gulp.task('css', function () {
   return gulp.src('dev/css/*.css')
-    .pipe(gulp.dest('prod/css'));
+    .pipe(gulp.dest('prod/css'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('htmlification', function(){
+// HTML
+gulp.task('htmlification', function () {
   return gulp.src('dev/*.html')
-    .pipe(gulp.dest('prod'));
+    .pipe(gulp.dest('prod'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('jsification', function(){
+// JavaScript
+gulp.task('jsification', function () {
   return gulp.src('dev/js/*.js')
     .pipe(uglify())
-    .pipe(rename(function(path){
-      path.basename += ".min";
-    }))
-    .pipe(gulp.dest('prod/js'));
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('prod/js'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('imageTransfer', function(){
+// Images
+gulp.task('imageTransfer', function () {
   return gulp.src('dev/img/**')
-    .pipe(gulp.dest('prod/img'));
+    .pipe(gulp.dest('prod/img'))
 });
 
-gulp.task('fontTransfer', function(){
+// Fonts
+gulp.task('fontTransfer', function () {
   return gulp.src('dev/fonts/**')
-    .pipe(gulp.dest('prod/fonts'));
+    .pipe(gulp.dest('prod/fonts'))
 });
 
-gulp.task('browser-sync', function() {
+// BrowserSync
+gulp.task('browser-sync', function () {
   browserSync.init({
-      server: {
-          baseDir: "prod/"
-      }
+    server: {
+      baseDir: 'prod/'
+    }
   });
 });
 
-// Exec
-
-gulp.task('observation', gulp.parallel('browser-sync', 'sassification', 'css', 'htmlification','jsification', 'imageTransfer','fontTransfer', function(){
+// Watch files
+function watchFiles() {
   gulp.watch('dev/css/**/*.scss', gulp.series('sassification'));
+  gulp.watch('dev/css/*.css', gulp.series('css'));
   gulp.watch('dev/*.html', gulp.series('htmlification'));
   gulp.watch('dev/js/*.js', gulp.series('jsification'));
-  gulp.watch('prod/**/*').on('change', browserSync.reload);
-}));
-gulp.task('default', gulp.series('observation'));
+  gulp.watch('dev/img/**', gulp.series('imageTransfer'));
+  gulp.watch('dev/fonts/**', gulp.series('fontTransfer'));
+}
+
+// Main task
+gulp.task('default', gulp.series(
+  gulp.parallel('sassification', 'css', 'htmlification', 'jsification', 'imageTransfer', 'fontTransfer'),
+  gulp.parallel('browser-sync', watchFiles)
+));

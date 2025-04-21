@@ -1247,3 +1247,224 @@ footer{
   top: 8px;
   width: 10px;
 }
+.single-page .page__content__img__text{
+  margin-bottom: 2rem;
+}
+.single-page .page__content__img__text .wrapper{
+  display: flex;
+}
+.img__text{
+  display: flex;
+  gap: 2rem;
+}
+.img__text__img{
+  width: 300px;
+  height: 100%;
+}
+.img__text__img img{
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+}
+.text__img .img__text__img{
+  order: 2;
+}
+.text__img .img__text__content{
+  order: 1;
+}
+.grey-bg{
+  background-color: var(--light-grey-color);
+  padding-bottom: 2rem;
+}
+.white-bg{
+  background-color: var(--white-color);
+  padding-bottom: 2rem;
+}
+.intro__publication{
+  margin: 2rem 0;
+}
+.intro__publication .wrapper{
+  display: flex;
+  gap: 2rem;
+}
+.publication__items{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+  width: 500px;
+  position: sticky;
+  top: 0;
+  border: 1px solid var(--light-blue-color);
+  border-radius: 5px;
+  padding: 8px;
+}
+.mixitup-control-active{
+  background-color: var(--light-blue-color);
+  color: var(--white-color) !important;
+}
+.btn-collapsible{
+  padding: 4px 8px;
+  text-decoration: none;
+  color: var(--dark-blue-color);
+  border-radius: 5px;
+  margin-right: 6px;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  list-style: none;
+}
+ul.btn-collapsible{
+  margin: 0;
+}
+.btn-collapsible li{
+  padding: 6px 12px;
+  text-decoration: none;
+  color: var(--dark-blue-color);
+  border-radius: 5px;
+  margin-right: 6px;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+}
+/* collapsible design */
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+.active-collapse:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.publication__card{
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--light-blue-color);
+  padding-top: 1rem;
+}
+.publication__img{
+  width: 150px;
+  height: 150px;
+}
+.publication__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.publication__text{
+  width: 80%;
+}
+.publication__tag{
+  font-size: .7rem;
+}
+.publication__tag span{
+  background-color: var(--light-blue-color);
+  border: 1px solid var(--light-blue-color);
+  padding: 4px 8px;
+  text-decoration: none;
+  color: var(--white-color);
+  border-radius: 5px;
+  margin-right: 6px;
+}
+.publication__title{
+  margin: .5rem 0;
+}
+.publication__info{
+  font-size: .7rem;
+  margin:0 1rem 0 0;
+}
+/* Page centre */
+.intro__centre{
+  margin: 2rem 0;
+}
+.centre__cards{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@media (max-width: 900px){
+  .centre__cards{
+    flex-direction: column;
+  }
+}
+.centre__card{
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  gap: .8rem;
+}
+@media (max-width: 900px){
+  .centre__card{
+    width: 100%;
+  }
+}
+.centre__card__img{
+  width: 100%;
+  height: 250px;
+}
+.centre__card__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.centre__card__title h3{
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 500;
+}
+.centre__card__more{
+  display: flex;
+  justify-content: flex-end;
+}
+.centre__card__more a{
+  text-decoration: none;
+  color: var(--light-blue-color);
+}
+.centre__card__more i{
+  margin-left: 1rem;
+  color: var(--light-blue-color);
+}
+.single__centre__info{
+  padding: 2rem 0;
+  background-color: var(--light-grey-color);
+}
+.single__centre__info .wrapper{
+  display: flex;
+  gap: 2rem;
+}
+.single__centre__info__content{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.single__centre__info__content div:nth-of-type(1){
+  display: flex;
+  gap: 1rem;
+}
+.single__centre__info__content i{
+  margin-right: 1rem;
+}
+.centre__tag{
+  font-size: .8rem;
+}
+.centre__tag a{
+  background-color: transparent;
+  border: 1px solid var(--dark-blue-color);
+  padding: 4px 8px;
+  text-decoration: none;
+  color: var(--dark-blue-color);
+  border-radius: 5px;
+  margin-right: 6px;
+}
+.single__centre__description{
+  margin: 2rem 0;
+}
+.single__centre__plan{
+  margin: 0 0 2rem 0;
+}

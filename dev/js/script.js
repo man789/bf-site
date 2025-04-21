@@ -67,3 +67,9 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+mixitup('.container', {
+  animation: {
+      enable: false
+  }
+});
