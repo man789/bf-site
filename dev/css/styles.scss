@@ -1467,4 +1467,24 @@ ul.btn-collapsible{
 }
 .single__centre__plan{
   margin: 0 0 2rem 0;
+  padding-bottom: 2rem;
+  background-color: var(--light-grey-color);
+}
+.single__centre__plan .wrapper{
+  
+}
+.single__centre__plan .wrapper h2{
+  width: 100%;
+}
+.single__centre__plan__img{
+  width: 100%;
+  height: 500px;
+}
+.single__centre__plan__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.single__centre__plan__text a{
+  padding: 10px;
 }
